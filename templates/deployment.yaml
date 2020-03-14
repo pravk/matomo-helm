@@ -29,11 +29,6 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          env:
-            {{- range .Values.env }}
-            - name: {{ .name }}
-              value: {{ .value }}
-            {{- end }}
           ports:
             - name: fastcgi
               containerPort: 9000
