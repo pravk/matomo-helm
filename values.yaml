@@ -56,7 +56,7 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   hosts:
     - host: matomo.beta.livspace.com
-      paths: 
+      paths:
         - "/"
 
   tls: []
@@ -115,3 +115,17 @@ redis:
 
 mysql:
   enabled: false
+env:
+  - name: MATOMO_DATABASE_HOST
+    value: dbhost
+  - name: MATOMO_DATABASE_ADAPTER
+    value: MYSQLI
+  - name: MATOMO_DATABASE_TABLES_PREFIX
+    value: ma_
+  - name: MATOMO_DATABASE_USERNAME
+    value: matomo
+  - name: MATOMO_DATABASE_PASSWORD
+    value: password
+  - name: MATOMO_DATABASE_DBNAME
+    value: matomodb
+
