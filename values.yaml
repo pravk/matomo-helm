@@ -110,7 +110,7 @@ nginx:
     # runAsUser: 1000
 
 redis:
-  enabled: false
+  enabled: true
 
 mysql:
   enabled: false
